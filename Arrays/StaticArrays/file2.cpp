@@ -1,9 +1,10 @@
 #include <iostream>
 using namespace std;
 
+//2D array
 int main() {
     int arr[2][3] = {{1,2,3},{4,5,6}};
-    //access
+    //access    r  c 
     cout << arr[1][0];
     //traversal
     for(int i=0; i<2; i++){
