@@ -120,7 +120,26 @@ void insertBeforeVal(Node*& head, int target, int val){
 }
 
 void insertAfterVal(Node*& head, int target, int val){
-    
+    Node* newNode = new Node{val, NULL};
+
+    if(head == NULL){
+        newNode->next = head;
+        head = newNode;
+        return;
+    }
+
+    Node* temp = head;
+
+    do{
+        if(temp->data == target){
+            newNode->next = temp->next;
+            temp->next = newNode;
+            return;
+        }
+        temp = temp->next;
+    }while(temp!=head);
+
+    cout << "Value Not Found";
 }
 
 void printList(Node* head){
@@ -148,10 +167,11 @@ int main() {
     second->next = third;
     third->next = head;
 
-    insertAtStart(head, 100);
-    insertAtEnd(head, 200);
+    // insertAtStart(head, 100);
+    // insertAtEnd(head, 200);
     // insertAtPosition(head, 500, 3);
-    insertBeforeVal(head, 20, 44);
+    // insertBeforeVal(head, 20, 44);
+    insertAfterVal(head, 50, 44);
     printList(head);
 
     return 0;
