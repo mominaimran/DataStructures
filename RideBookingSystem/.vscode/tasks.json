@@ -1,0 +1,20 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build & Run RideBookingSystem",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-Command",
+        "chcp 65001 > $null; g++ -g -Iinclude -finput-charset=UTF-8 -fexec-charset=UTF-8 main.cpp src/Driver.cpp src/Passenger.cpp src/Ride.cpp src/FileHandler.cpp src/LinkedList.cpp src/Stack.cpp src/Queue.cpp src/Graph.cpp src/RideBookingSystem.cpp -o bin/ridebookingsystem.exe; & ./bin/ridebookingsystem.exe; Read-Host 'Press Enter to exit...'"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
