@@ -17,7 +17,7 @@ public:
     Passenger();
 
     // Functions
-    void inputPassenger();
+    void inputPassenger(int id);
     void displayPassenger();
     int getId();
     string getName();

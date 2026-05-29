@@ -33,7 +33,7 @@ void RideBookingSystem::registerPassenger()
         return;
     }
 
-    passengers[passengerCount].inputPassenger();
+    passengers[passengerCount].inputPassenger(id);
     passengerCount++;
 
     FileHandler::savePassenger(

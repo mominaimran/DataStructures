@@ -42,7 +42,8 @@ void Passenger::setPickupLocation(string pickup) {
 }
 
 // Input function
-void Passenger::inputPassenger() {
+void Passenger::inputPassenger(int id) {
+    passengerId = id;
     cin.ignore();
 
     cout << "Enter Name: ";
