@@ -1,6 +1,7 @@
 #ifndef RIDEBOOKINGSYSTEM_H
 #define RIDEBOOKINGSYSTEM_H
 
+//coordinate all components of the system, manage data and implement core functionalities like booking rides, processing queues, and maintaining ride history.
 #include <iostream>
 #include "Passenger.h"
 #include "Driver.h"
